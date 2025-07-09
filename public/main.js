@@ -1,4 +1,3 @@
-// 🎉 Animasi teks pembuka menggunakan Typed.js
 const typed = new Typed("#typed", {
   strings: ["Haloo, Sayaangg!", "Happy 3rd Montversary, Sayaanggggg!!"],
   typeSpeed: 80,
@@ -18,7 +17,6 @@ const typed = new Typed("#typed", {
   },
 });
 
-// 📦 Inisialisasi elemen
 const btnFirst = document.getElementById("nextBtn");
 const mainPage = document.getElementById("mainPage");
 const calendarContainer = document.getElementById("calendarContainer");
@@ -30,7 +28,7 @@ const yeyPage = document.getElementById("yeyPage");
 const scrollPage = document.getElementById("scrollPage");
 const galleryPage = document.getElementById("galleryPage");
 
-// ▶️ Tombol dari halaman awal ke animasi kalender
+// halaman awal ke kalender
 btnFirst.addEventListener("click", () => {
   mainPage.classList.add("opacity-0", "pointer-events-none");
 
@@ -41,7 +39,7 @@ btnFirst.addEventListener("click", () => {
   }, 800);
 });
 
-// ⌨️ Validasi password
+// password val
 submitPassword.addEventListener("click", () => {
   const value = passwordInput.value.trim();
   if (value === "842025") {
@@ -57,7 +55,7 @@ submitPassword.addEventListener("click", () => {
   }
 });
 
-// 🗝️ Tampilkan halaman password
+// nampilin halaman password
 function showPasswordPage() {
   passwordPage.classList.remove("hidden");
   setTimeout(() => {
@@ -65,7 +63,6 @@ function showPasswordPage() {
   }, 10);
 }
 
-// 🎊 Halaman "YEYYYY PASSWORD NYA BENAR"
 function showYeyPage() {
   yeyPage.classList.remove("hidden");
   yeyPage.classList.add("opacity-100", "transition-opacity", "duration-700");
@@ -88,12 +85,12 @@ function showYeyPage() {
   });
 }
 
-// 📖 Halaman longteks scroll + transisi fade
+// page longtext
 function showScrollPage() {
   scrollPage.classList.remove("hidden");
   scrollPage.classList.add("opacity-0", "transition-opacity", "duration-700");
 
-  // Buat tombol Next
+  // next button
   const btnNext = document.createElement("button");
   btnNext.innerText = "Next";
   btnNext.className =
@@ -109,7 +106,6 @@ function showScrollPage() {
 
   scrollPage.appendChild(btnNext);
 
-  // Aktifkan scroll
   document.body.classList.remove("items-center", "justify-center");
   document.body.classList.add("overflow-y-auto");
 
@@ -119,7 +115,7 @@ function showScrollPage() {
   }, 10);
 }
 
-// 📷 Halaman Gallery
+// gallery page
 function showGalleryPage() {
   galleryPage.classList.remove("hidden");
   galleryPage.classList.add("opacity-0", "transition-opacity", "duration-700");
@@ -130,7 +126,7 @@ function showGalleryPage() {
   }, 10);
 }
 
-// 📅 Animasi kalender
+// animasi kalender
 function startCalendarAnimation() {
   const calendar = document.getElementById("calendar");
   const months = ["8 April 2025", "8 May 2025", "8 June 2025", "8 July 2025"];
